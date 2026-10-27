@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SoundMateTV</title>
+    <meta name="description" content="Privacy Policy for SoundMateTV (SoundMate for Android TV) - Privacy-first companion app for Sonos speakers.">
+    <link rel="icon" type="image/png" href="app_icon.png">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131b2e;
+            --bg-card: #1a233a;
+            --bg-card-border: #2a3756;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-primary: #007aff;
+            --accent-glow: #00e5ff;
+            --accent-green: #34c759;
+            --accent-amber: #f59e0b;
+            --card-radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+            padding-bottom: 60px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(19, 27, 46, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--bg-card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.25);
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .brand-subtitle {
+            font-size: 0.82rem;
+            color: var(--accent-glow);
+            font-weight: 500;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px;
+            border-radius: 8px;
+            border: 1px solid var(--bg-card-border);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active, .lang-btn:hover {
+            background: var(--accent-primary);
+            color: #ffffff;
+        }
+
+        /* Container */
+        .main-container {
+            max-width: 900px;
+            margin: 32px auto 0;
+            padding: 0 24px;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.12) 0%, rgba(0, 229, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            border-radius: var(--card-radius);
+            padding: 28px;
+            margin-bottom: 28px;
+        }
+
+        .hero-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #ffffff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(52, 199, 89, 0.15);
+            border: 1px solid rgba(52, 199, 89, 0.3);
+            color: var(--accent-green);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        /* Alert Callout Box (Google Play Prominent Disclosure) */
+        .alert-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin: 24px 0;
+        }
+
+        .alert-title {
+            color: var(--accent-amber);
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--bg-card-border);
+            border-radius: var(--card-radius);
+            padding: 28px;
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--bg-card-border);
+            padding-bottom: 10px;
+        }
+
+        .section-number {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.96rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 14px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding: 6px 0 6px 24px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 8px;
+            top: 2px;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 14px;
+            border: 1px solid var(--bg-card-border);
+        }
+
+        th {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        .contact-box {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 14px;
+            border: 1px solid var(--bg-card-border);
+        }
+
+        .contact-email {
+            color: var(--accent-glow);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 20px 24px 0;
+            border-top: 1px solid var(--bg-card-border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Language content blocks */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="brand-group">
+                <img src="app_icon.png" alt="SoundMateTV Logo" class="brand-logo">
+                <div>
+                    <div class="brand-title">SoundMateTV</div>
+                    <div class="brand-subtitle">Sonos TV Companion</div>
+                </div>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn" onclick="switchLanguage('zh')">简体中文</button>
+                <button class="lang-btn" onclick="switchLanguage('ja')">日本語</button>
+                <button class="lang-btn" onclick="switchLanguage('ko')">한국어</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- ================================================================= -->
+        <!-- ENGLISH CONTENT (DEFAULT) -->
+        <!-- ================================================================= -->
+        <div id="content-en" class="lang-content active">
+            <div class="hero-card">
+                <h1 class="hero-title">Privacy Policy</h1>
+                <div class="hero-meta">Effective Date: October 27, 2026 • Last Updated: October 27, 2026</div>
+                <div class="hero-badge">
+                    <span>🛡️</span> Zero Cloud Collection • 100% Local Wi-Fi Execution
+                </div>
+            </div>
+
+            <!-- PROMINENT ACCESSIBILITY DISCLOSURE (CRITICAL FOR GOOGLE PLAY) -->
+            <div class="alert-box">
+                <div class="alert-title">
+                    <span>⚠️</span> Prominent Disclosure: Android AccessibilityService API Usage
+                </div>
+                <p>
+                    <strong>SoundMateTV</strong> uses the Android <code>AccessibilityService API</code> strictly to deliver core remote control enhancement functions on Android TV.
+                </p>
+                <ul>
+                    <li><strong>Remote Control Key Interception:</strong> Detects TV remote volume and shortcut button events (Volume Up/Down/Mute, D-Pad shortcuts) to adjust your Sonos speaker volume and display custom TV HUD overlays and dials.</li>
+                    <li><strong>Active App Profile Switching:</strong> Observes window state changes solely to retrieve the foreground media app package name, enabling per-app sound profile memory and custom HUD positioning.</li>
+                </ul>
+                <p>
+                    <strong>Data Commitment:</strong> The Accessibility Service is strictly local. It <strong>NEVER</strong> captures, records, stores, or transmits typed keystrokes, passwords, payment info, personal messages, or on-screen content.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">1.</span> Introduction & Scope</h2>
+                <p>
+                    This Privacy Policy applies to the <strong>SoundMateTV</strong> application (referred to as "the App", "we", "us", or "our"), designed for Android TV and Google TV devices to interface with Sonos home audio systems.
+                </p>
+                <p>
+                    We respect your privacy and are committed to protecting it. SoundMateTV is built from the ground up as a <strong>privacy-first, offline-capable companion tool</strong>. All discovery and control routines run entirely within your home local network.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">2.</span> Information Collection and Usage</h2>
+                <p>
+                    <strong>We do NOT collect, transmit, sell, or store any personal information on external servers.</strong>
+                </p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Collected by App?</th>
+                                <th>How It Is Used</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Personal Information (Name, Email, Phone)</td>
+                                <td><strong>No</strong></td>
+                                <td>Not required; no account system.</td>
+                            </tr>
+                            <tr>
+                                <td>Local Sonos Speaker IP & Topology</td>
+                                <td><strong>Locally Only</strong></td>
+                                <td>Stored in device local SharedPreferences to communicate with your Sonos soundbar over UPnP/SSDP. Never uploaded.</td>
+                            </tr>
+                            <tr>
+                                <td>Keystrokes / Passwords / Screen Content</td>
+                                <td><strong>No</strong></td>
+                                <td>Never monitored or recorded.</td>
+                            </tr>
+                            <tr>
+                                <td>Usage Analytics / Tracking IDs / Ad IDs</td>
+                                <td><strong>No</strong></td>
+                                <td>No third-party analytics or advertising SDKs.</td>
+                            </tr>
+                            <tr>
+                                <td>Run Logs & Diagnostics</td>
+                                <td><strong>Locally Only</strong></td>
+                                <td>Disabled by default. Stored solely in local TV storage with strict rotation for on-screen troubleshooting.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">3.</span> Permissions Used by the Application</h2>
+                <p>SoundMateTV requests only the minimal permissions required to function as an audio companion on Android TV:</p>
+                <ul>
+                    <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Used solely to discover and send UPnP/SOAP commands to Sonos speakers within your local Wi-Fi / LAN network. No external cloud connections are made.</li>
+                    <li><strong>CHANGE_WIFI_MULTICAST_STATE:</strong> Allows the app to send and receive SSDP multicast packets for automatic speaker discovery on your local network.</li>
+                    <li><strong>SYSTEM_ALERT_WINDOW:</strong> Allows the app to render floating volume HUD bars and control dials on top of other TV apps.</li>
+                    <li><strong>BIND_ACCESSIBILITY_SERVICE:</strong> Enables instantaneous remote control button listening and active media app identification (detailed in the Prominent Disclosure above).</li>
+                    <li><strong>PACKAGE_USAGE_STATS:</strong> An alternative fallback to detect active foreground media player apps for independent volume memory when accessibility service is not active.</li>
+                    <li><strong>RECEIVE_BOOT_COMPLETED:</strong> Optional permission to automatically launch background audio synchronization when the TV powers on.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">4.</span> Third-Party Services and SDKs</h2>
+                <p>
+                    SoundMateTV does <strong>NOT</strong> integrate any third-party tracking, advertising, analytics, or profiling frameworks (such as Google Analytics, Firebase Analytics, Facebook SDK, or AdMob).
+                </p>
+                <p>
+                    The app communicates solely with your Sonos hardware via standard open network protocols (UPnP, SSDP, and GENA events) over your private local area network.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">5.</span> Children's Privacy (COPPA Compliance)</h2>
+                <p>
+                    Our app does not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. Since the app collects no personal information whatsoever, it poses zero privacy risk to children.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">6.</span> Security of Your Data</h2>
+                <p>
+                    Because all settings and speaker associations are stored strictly inside your TV's sandboxed local application storage (Android SharedPreferences) and all network requests are strictly confined to your local subnet, your data is as secure as your home Wi-Fi network.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">7.</span> Changes to This Privacy Policy</h2>
+                <p>
+                    We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this document.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">8.</span> Contact Us</h2>
+                <p>
+                    If you have any questions, suggestions, or concerns regarding this Privacy Policy or the security of SoundMateTV, please contact the developer directly:
+                </p>
+                <div class="contact-box">
+                    <p><strong>Developer:</strong> chenhuanchong</p>
+                    <p><strong>App:</strong> SoundMateTV for Sonos</p>
+                    <p><strong>Email:</strong> <a href="mailto:chenhuanchong@gmail.com" class="contact-email">chenhuanchong@gmail.com</a></p>
+                    <p><strong>Repository:</strong> <a href="https://github.com/chenhuanchong/SoundMateTV" target="_blank" class="contact-email">https://github.com/chenhuanchong/SoundMateTV</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- CHINESE CONTENT (SIMPLIFIED CHINESE) -->
+        <!-- ================================================================= -->
+        <div id="content-zh" class="lang-content">
+            <div class="hero-card">
+                <h1 class="hero-title">隐私政策 (Privacy Policy)</h1>
+                <div class="hero-meta">生效日期：2026 年 10 月 27 日 • 最后更新：2026 年 10 月 27 日</div>
+                <div class="hero-badge">
+                    <span>🛡️</span> 零云端上传 • 100% 本地局域网运行
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <div class="alert-title">
+                    <span>⚠️</span> 重要声明：Android 无障碍服务 (AccessibilityService API) 的使用
+                </div>
+                <p>
+                    <strong>SoundMateTV</strong> 严格使用 Android <code>AccessibilityService API</code> 来提供电视端的核心遥控器增强与声学控制功能：
+                </p>
+                <ul>
+                    <li><strong>遥控器物理按键响应：</strong> 实时拦截 TV 遥控器的音量加减、静音及方向快捷手势，用于就地调整您的 Sonos 音箱音量，并在屏幕上弹出自定义音量 HUD 与快捷拨盘。</li>
+                    <li><strong>前台活动应用检测：</strong> 仅监听窗口状态变化以获取当前前台运行的流媒体 App 包名，用于实现“分应用独立音量记忆”及自定义悬浮窗停靠位置。</li>
+                </ul>
+                <p>
+                    <strong>数据安全承诺：</strong> 无障碍服务完全在本地运行，<strong>绝不</strong>读取、记录、存储或上传您的任何按键输入内容、密码、屏幕文字、通知内容或个人隐私数据。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">1.</span> 概述与应用范围</h2>
+                <p>
+                    本隐私政策适用于 <strong>SoundMateTV</strong>（以下简称为“本应用”或“我们”）。本应用专为 Android TV / Google TV 电视平台设计，用于在电视上便捷控制与联动您的 Sonos 家庭影院音响系统。
+                </p>
+                <p>
+                    我们恪守<strong>“隐私至上、本地优先”</strong>的设计理念。本应用的所有音箱发现、音量调节与状态同步均在您家庭的本地局域网（Wi-Fi / LAN）中点对点直连完成。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">2.</span> 信息收集与处理</h2>
+                <p><strong>我们绝不在外部云端服务器收集、存储、出售或上传您的任何个人数据。</strong></p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>数据类型</th>
+                                <th>是否收集？</th>
+                                <th>处理与使用方式</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>个人身份信息 (姓名、邮箱、电话)</td>
+                                <td><strong>否</strong></td>
+                                <td>应用无需注册登录，无任何账户体系。</td>
+                            </tr>
+                            <tr>
+                                <td>家庭音箱 IP 与设备拓扑</td>
+                                <td><strong>仅本地保存</strong></td>
+                                <td>保存在电视本机的 SharedPreferences 容器中，用于 UPnP 本地控制。绝不上传。</td>
+                            </tr>
+                            <tr>
+                                <td>按键内容 / 密码 / 屏幕画面</td>
+                                <td><strong>否</strong></td>
+                                <td>绝不监控或记录任何文本与画面。</td>
+                            </tr>
+                            <tr>
+                                <td>广告追踪 ID / 用户行为分析</td>
+                                <td><strong>否</strong></td>
+                                <td>未集成任何第三方统计或广告 SDK。</td>
+                            </tr>
+                            <tr>
+                                <td>运行调试日志</td>
+                                <td><strong>仅本地保存</strong></td>
+                                <td>默认完全禁用。仅在用户手动开启时保存在电视本地，严格滚动归档防占空间。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">3.</span> 应用权限使用说明</h2>
+                <ul>
+                    <li><strong>网络权限 (INTERNET & ACCESS_NETWORK_STATE)：</strong> 仅用于向同一家庭 Wi-Fi 下的 Sonos 音箱发送 UPnP/SOAP 控制指令，不访问外网云端。</li>
+                    <li><strong>多播网络权限 (CHANGE_WIFI_MULTICAST_STATE)：</strong> 用于局域网 SSDP 广播搜索与发现在线音箱。</li>
+                    <li><strong>悬浮窗权限 (SYSTEM_ALERT_WINDOW)：</strong> 用于在电视上层覆盖显示音量 HUD 胶囊与悬浮控制盘。</li>
+                    <li><strong>无障碍权限 (BIND_ACCESSIBILITY_SERVICE)：</strong> 用于实现 0ms 遥控器物理按键响应与分应用独立记忆（详见上方重要声明）。</li>
+                    <li><strong>应用使用情况统计 (PACKAGE_USAGE_STATS)：</strong> 当无障碍未开启时的备选前台 App 检测途径。</li>
+                    <li><strong>开机自启权限 (RECEIVE_BOOT_COMPLETED)：</strong> 电视开机后可由用户选择常驻后台守护，便于一开机即可使用遥控器调音。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">4.</span> 第三方服务与 SDK 说明</h2>
+                <p>
+                    SoundMateTV <strong>不包含</strong>任何第三方追踪工具、数据分析组件、广告植入或用户画像 SDK。我们不与任何第三方广告商或数据平台共享数据。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">5.</span> 儿童隐私保护</h2>
+                <p>
+                    本应用不面向 13 岁以下的儿童，且不收集任何个人可识别信息，完全符合儿童在线隐私保护法 (COPPA) 的安全准则。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">6.</span> 政策更新与联系方式</h2>
+                <p>如对本隐私政策有任何疑问，请随时联系开发者：</p>
+                <div class="contact-box">
+                    <p><strong>开发者：</strong> chenhuanchong</p>
+                    <p><strong>应用名称：</strong> SoundMateTV for Sonos</p>
+                    <p><strong>电子邮箱：</strong> <a href="mailto:chenhuanchong@gmail.com" class="contact-email">chenhuanchong@gmail.com</a></p>
+                    <p><strong>开源仓库：</strong> <a href="https://github.com/chenhuanchong/SoundMateTV" target="_blank" class="contact-email">https://github.com/chenhuanchong/SoundMateTV</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- JAPANESE CONTENT -->
+        <!-- ================================================================= -->
+        <div id="content-ja" class="lang-content">
+            <div class="hero-card">
+                <h1 class="hero-title">プライバシーポリシー (Privacy Policy)</h1>
+                <div class="hero-meta">制定日：2026年10月27日 • 最終更新日：2026年10月27日</div>
+                <div class="hero-badge">
+                    <span>🛡️</span> クラウド収集ゼロ • 100% ローカルWi-Fi通信
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <div class="alert-title">
+                    <span>⚠️</span> 重要開示事項：アクセシビリティサービス (AccessibilityService API) の利用
+                </div>
+                <p>
+                    <strong>SoundMateTV</strong> は、Android TV 上でリモコンの操作拡張を提供するために、Android の <code>AccessibilityService API</code> を厳格に使用します：
+                </p>
+                <ul>
+                    <li><strong>リモコンキー入力の受信：</strong> テレビリモコンの音量ボタンおよびショートカットキーを検出し、Sonosスピーカーの音量調整およびカスタムHUDを表示します。</li>
+                    <li><strong>フォアグラウンドアプリの検出：</strong> アプリごとの音量記憶およびHUD位置の自動適応のため、現在アクティブなメディアアプリのパッケージ名のみを認識します。</li>
+                </ul>
+                <p>
+                    <strong>プライバシー保護：</strong> 入力されたキー、パスワード、画面テキスト、個人情報などを収集・記録・送信することは一切ありません。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">1.</span> 基本方針と情報収集について</h2>
+                <p>
+                    SoundMateTV はプライバシー最優先で設計されています。個人情報、音声データ、再生履歴などを外部サーバーに送信または保存することは一切ありません。すべての通信はご家庭の同一ローカルネットワーク（Wi-Fi）内でのみ完結します。
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">2.</span> お問い合わせ</h2>
+                <div class="contact-box">
+                    <p><strong>開発者：</strong> chenhuanchong</p>
+                    <p><strong>メール：</strong> <a href="mailto:chenhuanchong@gmail.com" class="contact-email">chenhuanchong@gmail.com</a></p>
+                    <p><strong>GitHub：</strong> <a href="https://github.com/chenhuanchong/SoundMateTV" target="_blank" class="contact-email">https://github.com/chenhuanchong/SoundMateTV</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- KOREAN CONTENT -->
+        <!-- ================================================================= -->
+        <div id="content-ko" class="lang-content">
+            <div class="hero-card">
+                <h1 class="hero-title">개인정보 처리방침 (Privacy Policy)</h1>
+                <div class="hero-meta">시행일자: 2026년 10월 27일 • 최종 수정일: 2026년 10월 27일</div>
+                <div class="hero-badge">
+                    <span>🛡️</span> 클라우드 수집 없음 • 100% 로컬 Wi-Fi 동작
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <div class="alert-title">
+                    <span>⚠️</span> 중요 공지: 접근성 서비스 (AccessibilityService API) 사용 안내
+                </div>
+                <p>
+                    <strong>SoundMateTV</strong>는 Android TV 환경에서 Sonos 스피커 제어를 향상시키기 위해 Android <code>AccessibilityService API</code>를 엄격하게 사용합니다:
+                </p>
+                <ul>
+                    <li><strong>리모컨 버튼 이벤트 감지:</strong> 볼륨 조절 및 바로가기 키 입력을 감지하여 Sonos 볼륨을 제어하고 화면에 커스텀 HUD를 띄웁니다.</li>
+                    <li><strong>실행 중인 앱 감지:</strong> 앱별 독립 볼륨 기억을 위해 현재 전면에서 실행 중인 미디어 앱의 패키지 이름만 인식합니다.</li>
+                </ul>
+                <p>
+                    <strong>보안 약속:</strong> 키보드 입력, 비밀번호, 화면 내용 등 어떠한 개인정보도 모니터링, 수집 또는 외부로 전송하지 않습니다.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">1.</span> 정보 수집 및 이용</h2>
+                <p>
+                    SoundMateTV는 어떠한 사용자 개인정보도 수집, 저장 또는 제3자에게 제공하지 않습니다. 모든 기기 검색 및 UPnP 제어 통신은 가정 내 로컬 네트워크(Wi-Fi) 내에서만 직접 이루어집니다.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title"><span class="section-number">2.</span> 문의처</h2>
+                <div class="contact-box">
+                    <p><strong>개발자:</strong> chenhuanchong</p>
+                    <p><strong>이메일:</strong> <a href="mailto:chenhuanchong@gmail.com" class="contact-email">chenhuanchong@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/chenhuanchong/SoundMateTV" target="_blank" class="contact-email">https://github.com/chenhuanchong/SoundMateTV</a></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SoundMateTV by chenhuanchong. All rights reserved.</p>
+        <p style="margin-top: 6px;">Sonos is a registered trademark of Sonos, Inc. This application is an independent third-party utility and is not affiliated with or endorsed by Sonos, Inc.</p>
+    </footer>
+
+    <!-- Language Switching Logic -->
+    <script>
+        function switchLanguage(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.textContent.toLowerCase().includes(lang === 'en' ? 'english' : lang === 'zh' ? '中文' : lang === 'ja' ? '日本' : '한국'));
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Update content blocks
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            const target = document.getElementById('content-' + lang);
+            if (target) target.classList.add('active');
+        }
+
+        // Auto-detect browser language
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+            if (userLang.startsWith('zh')) switchLanguage('zh');
+            else if (userLang.startsWith('ja')) switchLanguage('ja');
+            else if (userLang.startsWith('ko')) switchLanguage('ko');
+            else switchLanguage('en');
+        });
+    </script>
+</body>
+</html>
